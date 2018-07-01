@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { MovieModel } from "../../models/movie.model";
 /**
  * Generated class for the MovieInfoComponent component.
  *
@@ -11,12 +11,11 @@ import { Component } from '@angular/core';
   templateUrl: 'movie-info.html'
 })
 export class MovieInfoComponent {
-
+ @Input() miPelicula: MovieModel;
   text: string;
 
   constructor() {
     console.log('Hello MovieInfoComponent Component');
     this.text = 'Hello World';
   }
-
 }
