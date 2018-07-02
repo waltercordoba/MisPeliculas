@@ -9,6 +9,7 @@ export class MovieModel {
     _disponible: boolean;
     _estreno: number;
     _url: string;
+    _gusto: boolean;
 
   constructor(_titulo:string, _genero: string, _frase:string, _autor:string, _clasificacion:string) {
     this._titulo = _titulo;
@@ -18,42 +19,42 @@ export class MovieModel {
     this._clasificacion = _clasificacion;
   }
   get titulo(): string {
-      return _titulo;
+      return this._titulo;
   }
   set titulo(_titulo:string){
       this._titulo= _titulo;
   }
   get genero(): string{
-      return _genero;
+      return this._genero;
   }
   set genero(_genero:string) {
       this._genero = _genero;
   }
   get frase(): string {
-      return _frase;
+      return this._frase;
   }
   set frase(_frase:string) {
-      this._frase = frase;
+      this._frase = _frase;
   }
   set autor(_autor:string) {
     this._autor=_autor;
   }
   get autor() {
-    return _autor;
+    return this._autor;
   }
   get sinopsis():string {
-      return _sinopsis;
+      return this._sinopsis;
   }
   set sinopsis(_sinopsis:string) {
       this._sinopsis = _sinopsis;
   }
   get puntaje(): number {
-      return _number;
+      return this._puntaje;
   }
   set puntaje(_puntaje:number) {
     if (_puntaje <= 10 && _puntaje > 0)
     {
-        this._puntaje=puntaje;
+        this._puntaje=_puntaje;
     }
   }
   get clasificacion(): string {
@@ -63,21 +64,27 @@ export class MovieModel {
       this._clasificacion = _clasificacion;
   }
   get disponible(): boolean {
-    return _disponible;
+    return this._disponible;
   }
   set disponible(_disponible:boolean){
     this._disponible = _disponible;
   }
   get estreno():number {
-      return _estreno;
+      return this._estreno;
   }
   set estreno(_estreno:number) {
       this._estreno = _estreno;
   }
   get url(): string {
-    return _url;
+    return this._url;
   }
   set url(_url : string) {
     this._url = _url;
+  }
+  get gusto(): boolean {
+    return this.gusto;
+  }
+  set gusto(_gusto:boolean){
+    this._gusto = _gusto;
   }
 }

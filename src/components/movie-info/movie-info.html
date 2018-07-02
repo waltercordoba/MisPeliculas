@@ -1,11 +1,20 @@
 <div>
-  <h1 class="titulo">{{miPelicula.titulo}}</h1>
-  <h3>Esta es la frase <span class="frase">{{ miPelicula.frase }}</span>
-                       <span class="autor">{{ miPelicula.autor }}</span>
+  <h1 class="titulo">{{pelicula.titulo}}</h1>
+  <h3>Esta es la frase <span class="frase">{{ pelicula.frase }}</span>
+                       <span class="autor">{{ pelicula.autor }}</span>
   </h3>
-  <img [src]="miPelicula.url"/>
+  <img [src]="pelicula.url"/>
   <p class="caja">
-    <clasifica>{{miPelicula.clasifica}}</clasifica>
-        {{miPelicula.sinapsis}}
-    <puntaje>{{miPelicula.puntaje}}</puntaje>
+    <clasifica></clasifica>
+        {{pelicula.sinapsis}}
+    <puntaje></puntaje>
   </p>
+  <div class="actions-group">
+  <button ion-button color="secondary" (click)="meGustoPeli()">
+    Me gusta
+  </button>
+  <button ion-button color="danger" (click)="noGustoPeli()">
+    No me gusta
+  </button>
+</div>
+</div>

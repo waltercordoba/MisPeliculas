@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MovieModel } from "../../models/movie.model";
 /**
  * Generated class for the MovieInfoComponent component.
@@ -11,11 +11,19 @@ import { MovieModel } from "../../models/movie.model";
   templateUrl: 'movie-info.html'
 })
 export class MovieInfoComponent {
- @Input() miPelicula: MovieModel;
+ @Input() pelicula: MovieModel;
+ @Output() movieAction: EventEmitter<string> = new EventEmitter<string>();;
   text: string;
 
   constructor() {
     console.log('Hello MovieInfoComponent Component');
     this.text = 'Hello World';
   }
+  meGustoPeli() {
+  this.movieAction.emit('gusto');
+}
+
+noGustoPeli() {
+  this.movieAction.emit('noGusto');
+}
 }
