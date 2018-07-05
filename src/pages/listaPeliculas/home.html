@@ -6,8 +6,8 @@
 
 <ion-content padding>
   <ion-list>
-  <ion-list-header>Peliculas que me gustaron</ion-list-header>
-  <ion-item *ngFor="let m of misFavoritas">{{m.titulo}} - {{m.puntaje}}</ion-item>
+ <!--  <ion-list-header>Peliculas que me gustaron</ion-list-header>
+  <ion-item *ngFor="let m of misFavoritas">{{m.titulo}} - {{m.puntaje}}</ion-item> -->
 </ion-list>
   <movie-info *ngFor="let m of peliculas" [pelicula]='m' (movieAction)='action($event, m)'></movie-info>
 </ion-content>

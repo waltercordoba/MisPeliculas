@@ -10,12 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ComponentsModule } from '../components/components.module';
-
+import { RecomiendoPage } from '../pages/recomiendo/recomiendo';
+import { PerfilPage } from '../pages/perfil/perfil';
 
 @NgModule({
   declarations: [
     MyApp,
     listaPeliculasPage,
+    RecomiendoPage,
+    PerfilPage,
     TabsPage
   ],
   imports: [
@@ -27,6 +30,8 @@ import { ComponentsModule } from '../components/components.module';
   entryComponents: [
     MyApp,
     listaPeliculasPage,
+    RecomiendoPage,
+    PerfilPage,
     TabsPage
   ],
   providers: [
