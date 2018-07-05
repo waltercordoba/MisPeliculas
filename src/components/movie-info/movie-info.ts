@@ -13,7 +13,7 @@ import { MovieModel } from "../../models/movie.model";
 export class MovieInfoComponent {
  @Input() pelicula: MovieModel;
  @Output() movieAction: EventEmitter<string> = new EventEmitter<string>();;
-  text: string;
+ text: string;
 
   constructor() {
     console.log('Hello MovieInfoComponent Component');
