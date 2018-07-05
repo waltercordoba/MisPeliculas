@@ -10,4 +10,10 @@ import { PerfilPage } from './perfil';
     IonicPageModule.forChild(PerfilPage),
   ],
 })
-export class PerfilPageModule {}
+export class PerfilPageModule {
+  nombre: string;
+  constructor(){}
+  ngOnInit() {
+    nombre = "Walter";
+  }
+}

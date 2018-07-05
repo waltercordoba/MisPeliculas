@@ -9,10 +9,8 @@ import { MovieModel } from "../../models/movie.model";
 export class listaPeliculasPage {
 peliculas:MovieModel[];
 misFavoritas:MovieModel[];
-constructor() {
-
-                }
-  ngOnInit() {
+constructor() {}
+ngOnInit() {
     this.peliculas= [];
     this.misFavoritas= [];
     const p1 = new MovieModel ('Terminator Genesis', 'Accion', 'Im back', 'Arnold Swartzeneger', 'Prohibida para menores 16');
