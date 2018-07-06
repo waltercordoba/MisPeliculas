@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ComponentsModule } from '../components/components.module';
 import { RecomiendoPage } from '../pages/recomiendo/recomiendo';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MiProveedorProvider
   ]
 })
 export class AppModule {}

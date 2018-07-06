@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MovieInfoComponent } from './movie-info/movie-info';
 import { clasificaComponent } from './clasifica/clasifica';
 import { puntajeComponent } from './puntaje/puntaje';
+import { IonicModule } from "ionic-angular";
 
 @NgModule({
 	declarations: [
@@ -9,7 +10,7 @@ import { puntajeComponent } from './puntaje/puntaje';
 		clasificaComponent,
 		puntajeComponent
 	],
-	imports: [],
+	imports: [IonicModule],
 	exports: [
     MovieInfoComponent,
 		clasificaComponent,

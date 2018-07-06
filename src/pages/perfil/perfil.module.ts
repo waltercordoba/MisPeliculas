@@ -11,9 +11,7 @@ import { PerfilPage } from './perfil';
   ],
 })
 export class PerfilPageModule {
-  nombre: string;
+  nombre:string;
   constructor(){}
-  ngOnInit() {
-    nombre = "Walter";
-  }
+
 }

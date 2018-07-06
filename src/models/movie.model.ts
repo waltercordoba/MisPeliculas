@@ -82,7 +82,7 @@ export class MovieModel {
     this._url = _url;
   }
   get gusto(): boolean {
-    return this.gusto;
+    return this._gusto;
   }
   set gusto(_gusto:boolean){
     this._gusto = _gusto;

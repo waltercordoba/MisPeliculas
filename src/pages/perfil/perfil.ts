@@ -14,10 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'perfil.html',
 })
 export class PerfilPage {
-
+  nombre:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  ngOnInit() {
+    this.nombre = "Walter";
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
   }

@@ -15,10 +15,7 @@ export class MovieInfoComponent {
  @Output() movieAction: EventEmitter<string> = new EventEmitter<string>();;
  text: string;
 
-  constructor() {
-    console.log('Hello MovieInfoComponent Component');
-    this.text = 'Hello World';
-  }
+  constructor() {}
   meGustoPeli() {
   this.movieAction.emit('gusto');
 }
