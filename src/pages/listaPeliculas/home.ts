@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MovieModel } from "../../models/movie.model";
 import { MiProveedorProvider } from "../../providers/mi-proveedor/mi-proveedor";
+import { NavParams } from "ionic-angular";
 
 @Component({
   selector: 'page-home',
@@ -9,10 +10,12 @@ import { MiProveedorProvider } from "../../providers/mi-proveedor/mi-proveedor";
 })
 export class listaPeliculasPage {
 peliculas:MovieModel[];
+user: string;
 
-constructor(private miPrv: MiProveedorProvider) {}
+constructor(private miPrv: MiProveedorProvider, private navParams: NavParams) {}
 ngOnInit() {
     this.peliculas = this.miPrv.getMovies(false);
+    this.user = this.navParams.data.user;
 }
   action(actionName: string, pelicula: MovieModel) {
     const pos = this.peliculas.indexOf(pelicula);

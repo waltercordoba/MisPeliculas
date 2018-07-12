@@ -13,6 +13,7 @@ import { ComponentsModule } from '../components/components.module';
 import { RecomiendoPage } from '../pages/recomiendo/recomiendo';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
     listaPeliculasPage,
     RecomiendoPage,
     PerfilPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
     listaPeliculasPage,
     RecomiendoPage,
     PerfilPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

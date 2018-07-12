@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MiProveedorProvider } from "../../providers/mi-proveedor/mi-proveedor";
 
 /**
  * Generated class for the PerfilPage page.
@@ -15,10 +16,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerfilPage {
   nombre:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  apellido:string;
+  mail:string;
+  meGustaron: number;
+  miFavorita : string;
+  urlfoto: string;
+  constructor(private miPrv: MiProveedorProvider) {
   }
   ngOnInit() {
     this.nombre = "Walter";
+    this.apellido = "Córdoba";
+    this.mail = "cbawalter@gmail.com";
+    this.meGustaron = this.miPrv.cuantasVistas();
+    this.miFavorita = this.miPrv.getFavorita();
+    this.urlfoto = "assets//imgs//mifoto.jpg";
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');

@@ -14,8 +14,9 @@
 
 
 <ion-content padding>
-  <ion-list>Nombre: {{nombre}} </ion-list>
-  <ion-list>Correo: cbawalter@gmail.com</ion-list>
-  <ion-list>Pelicula Favorita: La era de hielo</ion-list>
-  <ion-list>Me gustaron: 2 peliculas</ion-list>
+  <img [src]="urlfoto"/>
+  <ion-list> <ion-icon name="person"></ion-icon> Nombre: {{nombre}} {{apellido}}</ion-list>
+  <ion-list> <ion-icon name="mail">  </ion-icon> Correo: {{mail}}</ion-list>
+  <ion-list> <ion-icon name="happy">  </ion-icon> Pelicula Favorita: {{miFavorita}}</ion-list>
+  <ion-list>Me gustaron: {{meGustaron}} peliculas</ion-list>
 </ion-content>

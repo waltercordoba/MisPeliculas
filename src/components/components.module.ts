@@ -9,12 +9,14 @@ import { IonicModule } from "ionic-angular";
     MovieInfoComponent,
 		clasificaComponent,
 		puntajeComponent
+
 	],
 	imports: [IonicModule],
 	exports: [
     MovieInfoComponent,
 		clasificaComponent,
 		puntajeComponent
+
 	]
 })
 export class ComponentsModule {}

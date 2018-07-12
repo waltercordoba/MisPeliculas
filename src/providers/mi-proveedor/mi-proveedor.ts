@@ -11,7 +11,8 @@ import { MovieModel } from "../../models/movie.model";
 @Injectable()
 export class MiProveedorProvider {
   peliculas:MovieModel[];
-
+  megustan: MovieModel[];
+  favorita: MovieModel;
   constructor() {
     this.peliculas= [];
     const p1 = new MovieModel ('Terminator Genesis', 'Accion', 'Im back', 'Arnold Swartzeneger', 'Prohibida para menores 16');
@@ -43,7 +44,18 @@ export class MiProveedorProvider {
     }
   }
 
-  getMoviesVistas(): MovieModel[] {
-     return this.peliculas.filter(peli => peli.gusto != undefined);
+  cuantasVistas(): number {
+    this.megustan = this.peliculas.filter(peli => peli.gusto === true);
+    return this.megustan.length;
+  }
+
+  getFavorita(): string {
+    this.favorita = this.peliculas.find(peli => peli.gusto === true);
+    if (typeof(this.favorita) != "undefined") {
+        return this.favorita.titulo;
+    }
+    else {
+         return "No me gusto ninguna peli";
+    }
   }
 }
