@@ -8,6 +8,7 @@ import { NavParams } from "ionic-angular";
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  user: any;
 
   tab1Root = listaPeliculasPage;
   tab2Root = RecomiendoPage;

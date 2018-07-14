@@ -14,6 +14,7 @@ import { RecomiendoPage } from '../pages/recomiendo/recomiendo';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
 import { LoginPage } from '../pages/login/login';
+import { DetallePage } from "../pages/detalle/detalle";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginPage } from '../pages/login/login';
     RecomiendoPage,
     PerfilPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    DetallePage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { LoginPage } from '../pages/login/login';
     RecomiendoPage,
     PerfilPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    DetallePage
   ],
   providers: [
     StatusBar,

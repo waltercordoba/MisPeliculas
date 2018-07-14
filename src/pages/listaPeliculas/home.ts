@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { MovieModel } from "../../models/movie.model";
 import { MiProveedorProvider } from "../../providers/mi-proveedor/mi-proveedor";
+import { NavController } from 'ionic-angular';
 import { NavParams } from "ionic-angular";
+import { DetallePage } from "../detalle/detalle";
 
 @Component({
   selector: 'page-home',
@@ -12,24 +13,13 @@ export class listaPeliculasPage {
 peliculas:MovieModel[];
 user: string;
 
-constructor(private miPrv: MiProveedorProvider, private navParams: NavParams) {}
+constructor(private miPrv: MiProveedorProvider, private navParams: NavParams, private navCtrl: NavController) {}
 ngOnInit() {
     this.peliculas = this.miPrv.getMovies(false);
     this.user = this.navParams.data.user;
 }
-  action(actionName: string, pelicula: MovieModel) {
-    const pos = this.peliculas.indexOf(pelicula);
-    var miPeli = this.peliculas.splice(pos, 1); // desde la posicion 1 elemento
-    switch (actionName) {
-      case 'gusto':
-        miPeli[0].gusto = true;
-        this.peliculas.push(miPeli[0]);
-        break;
-      case 'noGusto':
-        miPeli[0].gusto = false;
-        this.peliculas.push(miPeli[0]);
-        break;
+openMovieDetail(movie: MovieModel) {
+  this.navCtrl.push(DetallePage, {movie})
+}
 
-    }
-  }
 }
