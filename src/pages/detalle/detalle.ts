@@ -14,11 +14,11 @@ import { MovieModel } from "../../models/movie.model";
   templateUrl: 'detalle.html',
 })
 export class DetallePage {
-  movie: MovieModel;
+  peli: MovieModel;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   ngOnInit() {
-    this.movie = this.navParams.data.movie;
+    this.peli = this.navParams.data.peli; // Recibo la pelicula enviada desde home
   }
 //  action(actionName: string, pelicula: MovieModel)
   action(actionName: string) {
@@ -27,14 +27,17 @@ export class DetallePage {
 */
     switch (actionName) {
       case 'gusto':
-        this.movie.gusto = true;
+        this.peli.gusto = true;
     /*    miPeli[0].gusto = true;
         this.peliculas.push(miPeli[0]); */
         break;
       case 'noGusto':
-        this.movie.gusto = false;
+        this.peli.gusto = false;
     /*    miPeli[0].gusto = false;
         this.peliculas.push(miPeli[0]); */
+        break;
+      case 'favorita':
+        this.peli.favorita = true;
         break;
     }
   }

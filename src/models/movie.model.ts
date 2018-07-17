@@ -10,6 +10,7 @@ export class MovieModel {
     _estreno: number;
     _url: string;
     _gusto: boolean;
+    _favorita: boolean;
 
   constructor(_titulo:string, _genero: string, _frase:string, _autor:string, _clasificacion:string) {
     this._titulo = _titulo;
@@ -86,5 +87,11 @@ export class MovieModel {
   }
   set gusto(_gusto:boolean){
     this._gusto = _gusto;
+  }
+  get favorita(): boolean {
+    return this._favorita;
+  }
+  set favorita(_favorita:boolean){
+    this._favorita = _favorita;
   }
 }

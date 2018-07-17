@@ -3,6 +3,10 @@
   <h3>Esta es la frase: <span class="frase">{{ pelicula.frase }}</span>
                        <span class="autor">{{ pelicula.autor }}</span>
   </h3>
+  <ion-item  (click)="favorita()">
+    <ion-icon ios="ios-star-outline" md="md-star-outline" name="favorita"></ion-icon>
+      Favorita
+  </ion-item>
   <img [src]="pelicula.url"/>
   <p class="caja">
     <clasifica></clasifica>
@@ -10,11 +14,15 @@
     <puntaje></puntaje>
   </p>
   <div class="actions-group">
-  <button ion-button color="secondary" (click)="meGustoPeli()">
-    Me gusta
-  </button>
-  <button ion-button color="danger" (click)="noGustoPeli()">
-    No me gusta
-  </button>
+    <button ion-button color="secondary" (click)="meGustoPeli()">
+      Me gusta
+    </button>
+    <button ion-button color="danger" (click)="noGustoPeli()">
+      No me gusta
+    </button>
+    <!--
+    <ion-icon item-start name="favorita"(click)="favorita()"></ion-icon>
+      Favorita
+    -->
 </div>
 </div>

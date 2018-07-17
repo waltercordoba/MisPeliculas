@@ -1,0 +1,12 @@
+<div>
+  <h1 class="titulo">{{pelicula.titulo}}</h1>
+  <img [src]="pelicula.url"/>
+  <p class="caja">
+    <clasifica></clasifica>
+        {{pelicula.sinapsis}}
+    <puntaje></puntaje>
+  </p>
+  <div *ngIf=" pelicula.favorita === true">
+      <ion-icon name="star" item-start></ion-icon>
+  </div>
+</div>

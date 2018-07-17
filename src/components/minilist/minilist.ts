@@ -7,22 +7,14 @@ import { MovieModel } from "../../models/movie.model";
  * Components.
  */
 @Component({
-  selector: 'movie-info',
-  templateUrl: 'movie-info.html'
+  selector: 'minilist',
+  templateUrl: 'minilist.html'
 })
-export class MovieInfoComponent {
+export class MinilistComponent {
  @Input() pelicula: MovieModel;
  @Output() movieAction: EventEmitter<string> = new EventEmitter<string>();;
  text: string;
 
   constructor() {}
-  meGustoPeli() {
-  this.movieAction.emit('gusto');
-}
-  noGustoPeli() {
-    this.movieAction.emit('noGusto');
-  }
-  favorita() {
-    this.movieAction.emit('favorita');
-  }
+
 }

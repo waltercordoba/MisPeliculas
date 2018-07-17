@@ -12,7 +12,7 @@
     <ion-item>
         <ion-avatar item-start>
     <!--      <movie-info *ngFor="let m of peliculas" [pelicula]='m' (movieAction)='action($event, m)'></movie-info> -->
-         <movie-info *ngFor="let m of peliculas" [pelicula]='m' tappable (click)="openMovieDetail(m)"> </movie-info>
+         <minilist *ngFor="let m of peliculas" [pelicula]='m' tappable (click)="verDetalle(m)"> </minilist>
       </ion-avatar>
     </ion-item>
 </ion-content>
