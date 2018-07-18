@@ -11,6 +11,7 @@ export class MovieModel {
     _url: string;
     _gusto: boolean;
     _favorita: boolean;
+    _minduracion: string;
 
   constructor(_titulo:string, _genero: string, _frase:string, _autor:string, _clasificacion:string) {
     this._titulo = _titulo;
@@ -93,5 +94,11 @@ export class MovieModel {
   }
   set favorita(_favorita:boolean){
     this._favorita = _favorita;
+  }
+  get minduracion():string {
+      return this._minduracion;
+  }
+  set minduracion(_minduracion:string) {
+      this._minduracion = _minduracion;
   }
 }

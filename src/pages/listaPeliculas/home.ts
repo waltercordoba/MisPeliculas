@@ -4,6 +4,7 @@ import { MiProveedorProvider } from "../../providers/mi-proveedor/mi-proveedor";
 import { NavController } from 'ionic-angular';
 import { NavParams } from "ionic-angular";
 import { DetallePage } from "../detalle/detalle";
+import { PipesModule } from "../../pipes/pipes.module";
 
 
 @Component({

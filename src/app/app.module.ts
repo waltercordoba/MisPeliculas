@@ -15,6 +15,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
 import { MiProveedorProvider } from '../providers/mi-proveedor/mi-proveedor';
 import { LoginPage } from '../pages/login/login';
 import { DetallePage } from "../pages/detalle/detalle";
+import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetallePage } from "../pages/detalle/detalle";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

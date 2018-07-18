@@ -1,5 +1,12 @@
 <div>
-  <h1 class="titulo">{{pelicula.titulo}}</h1>
+  <ion-item  class="titulo">{{pelicula.titulo | mituberia }}</ion-item>
+
+  <!--
+    <ion-item class="titulo" *ngIf="pelicula.minduracion.length != 0" {{pelicula.minduracion | mituberia}}> </ion-item>
+  <ion-item class="titulo" *ngIf="hrsd > 0">  {{hrsd}} hrs </ion-item>
+  <ion-item class="titulo" *ngIf="mind > 0">  {{mind}} min </ion-item>
+  -->
+
   <h3>Esta es la frase: <span class="frase">{{ pelicula.frase }}</span>
                        <span class="autor">{{ pelicula.autor }}</span>
   </h3>
